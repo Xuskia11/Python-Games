@@ -10,7 +10,7 @@ right_lane = width/2 + road_w/4
 left_lane = width/2 - road_w/4
 speed = 1
 points = pygame.time.get_ticks()
-test_font = pygame.font.Font("pixeltype.ttf", 50)
+# test_font = pygame.font.Font("pixeltype.ttf", 50)
 
 
 
@@ -33,13 +33,13 @@ pygame.display.update()
 
 
 #my car code
-car = pygame.image.load("car1.png")
+car = pygame.image.load("images/car1.png")
 car_loc = car.get_rect()
 car_loc.center = right_lane, height*0.8
 
 
 #my enemy car code
-car2 = pygame.image.load("car.png")
+car2 = pygame.image.load("images/car.png")
 car2_loc = car2.get_rect()
 car2_loc.center = left_lane, height*0.2
 
@@ -47,11 +47,11 @@ car2_loc.center = left_lane, height*0.2
 counter = 0
 while running:
     
-    test_text = test_font.render((f"Score: {str(points)} "), False,     "#00008B")
+    # test_text = test_font.render((f"Score: {str(points)} "), False,     "#00008B")
     score_surf = str(points)
     
-    score_rect = points.get_rect(center = (400,50))
-    screen.blit(test_text,score_rect)
+    # score_rect = points.get_rect(center = (400,50))
+    # screen.blit(test_text,score_rect)
     counter += 1
     if counter == 1000:
         speed += 0.25
