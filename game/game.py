@@ -3,12 +3,12 @@ from pygame.locals import *
 import random
 
 
-size = width, height = (800,750)
+size = width, height = (1920,1080)
 road_w = int(width/1.6)
 roadmark_w = int(width/80)
 right_lane = width/2 + road_w/4
 left_lane = width/2 - road_w/4
-speed = 1
+speed = 3
 points = pygame.time.get_ticks()
 # test_font = pygame.font.Font("pixeltype.ttf", 50)
 
@@ -93,12 +93,6 @@ while running:
     screen.blit(car, car_loc)
     screen.blit(car2, car2_loc)
     pygame.display.update()
-
-
-
-
-
-
 
 
 
