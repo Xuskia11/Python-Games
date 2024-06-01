@@ -3,14 +3,15 @@ from pygame.locals import *
 import random
 
 
-size = width, height = (1920,1080)
+size = width, height = (800,750)
 road_w = int(width/1.6)
 roadmark_w = int(width/80)
 right_lane = width/2 + road_w/4
 left_lane = width/2 - road_w/4
-speed = 3
+speed = 1
 points = pygame.time.get_ticks()
-# test_font = pygame.font.Font("pixeltype.ttf", 50)
+# test_font = pygame.font.Font("images/Pixeltype.ttf", 50)
+
 
 
 
@@ -58,17 +59,17 @@ while running:
         counter = 0
 
 
-    #animate enemy car
+        #animate enemy car
     car2_loc[1] += speed
     if car2_loc[1]> height:
         if random.randint(0,1) == 0:
             car2_loc.center = right_lane, -200
         else:
             car2_loc.center = left_lane, -200
-    #end game
+        #end game
     if car_loc[0] == car2_loc[0] and car2_loc[1] > car_loc[1] -230:
-          print("GAME OVER! YOU LOST!") 
-          break
+        print("GAME OVER! YOU LOST!") 
+        break
 
 
 
